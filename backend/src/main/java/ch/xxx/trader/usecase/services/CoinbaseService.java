@@ -321,24 +321,24 @@ public class CoinbaseService {
 					Method setterMethod = null;
 					if ("1Inch".equalsIgnoreCase(propertyDescriptor.getName())) {
 						getterMethod = Stream.of(QuoteCb.class.getMethods())
-								.filter(myMethod -> myMethod.getName().equalsIgnoreCase("get1Inch")).findFirst()
+								.filter(myMethod -> "get1Inch".equalsIgnoreCase(myMethod.getName())).findFirst()
 								.orElseThrow();
 						setterMethod = Stream.of(QuoteCb.class.getMethods())
-								.filter(myMethod -> myMethod.getName().equalsIgnoreCase("set1Inch")).findFirst()
+								.filter(myMethod -> "set1Inch".equalsIgnoreCase(myMethod.getName())).findFirst()
 								.orElseThrow();
 					} else if ("super".equalsIgnoreCase(propertyDescriptor.getName())) {
 						getterMethod = Stream.of(QuoteCb.class.getMethods())
-								.filter(myMethod -> myMethod.getName().equalsIgnoreCase("getSuper")).findFirst()
+								.filter(myMethod -> "getSuper".equalsIgnoreCase(myMethod.getName())).findFirst()
 								.orElseThrow();
 						setterMethod = Stream.of(QuoteCb.class.getMethods())
-								.filter(myMethod -> myMethod.getName().equalsIgnoreCase("setSuper")).findFirst()
+								.filter(myMethod -> "setSuper".equalsIgnoreCase(myMethod.getName())).findFirst()
 								.orElseThrow();
 					} else if ("try".equalsIgnoreCase(propertyDescriptor.getName())) {
 						getterMethod = Stream.of(QuoteCb.class.getMethods())
-								.filter(myMethod -> myMethod.getName().equalsIgnoreCase("getTry1")).findFirst()
+								.filter(myMethod -> "getTry1".equalsIgnoreCase(myMethod.getName())).findFirst()
 								.orElseThrow();
 						setterMethod = Stream.of(QuoteCb.class.getMethods())
-								.filter(myMethod -> myMethod.getName().equalsIgnoreCase("setTry1")).findFirst()
+								.filter(myMethod -> "setTry1".equalsIgnoreCase(myMethod.getName())).findFirst()
 								.orElseThrow();
 					} else {
 						getterMethod = propertyDescriptor.getReadMethod();

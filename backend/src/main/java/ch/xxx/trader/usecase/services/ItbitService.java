@@ -81,7 +81,7 @@ public class ItbitService {
 	}
 
 	public Mono<String> getOrderbook(String currpair) {
-		final String newCurrpair = currpair.equals("btcusd") ? "XBTUSD" : currpair;
+		final String newCurrpair = "btcusd".equals(currpair) ? "XBTUSD" : currpair;
 		return this.orderBookClient.getOrderbookItbit(newCurrpair);
 	}
 
